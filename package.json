@@ -1,0 +1,50 @@
+{
+  "name": "@grace-studio/json-to-xliff",
+  "version": "0.2.0",
+  "description": "",
+  "type": "module",
+  "exports": "./lib/index.js",
+  "bin": {
+    "json-to-xliff": "./bin/index.js"
+  },
+  "files": [
+    "bin/**/*",
+    "lib/**/*"
+  ],
+  "scripts": {
+    "lint": "eslint",
+    "clean": "rm -rf ./lib",
+    "build": "npm run clean && tsc",
+    "dev-xliff": "npm run build && node ./bin/index.js toXliff -f ./testfiles/test.json -o ./testfiles/test.xliff -l en",
+    "dev-json": "npm run build && node ./bin/index.js toJson -f ./testfiles/test.xliff -o ./testfiles/test2.json -l en",
+    "prepack": "npm run build",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/grace-studio/json-to-xliff.git"
+  },
+  "bugs": {
+    "url": "https://github.com/grace-studio/json-to-xliff/issues"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "4.1.2",
+    "commander": "11.1.0",
+    "xml2js": "0.6.2"
+  },
+  "devDependencies": {
+    "@types/node": "20.8.10",
+    "@types/xml2js": "0.4.13",
+    "eslint": "8.52.0",
+    "eslint-config-prettier": "9.0.0",
+    "eslint-plugin-import": "2.29.0",
+    "eslint-plugin-prettier": "5.0.1",
+    "prettier": "3.0.3",
+    "prettier-eslint": "16.1.2",
+    "typescript": "5.2.2"
+  },
+  "node": ">=18"
+}
