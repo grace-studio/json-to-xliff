@@ -1,6 +1,6 @@
 {
   "name": "@grace-studio/json-to-xliff",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "type": "module",
   "exports": "./lib/index.js",
