@@ -31,6 +31,6 @@ const convert = async (
 export const ConverterService = {
   toXliff: (inputFile: string, outputFile: string, lang: string) =>
     convert(inputFile, outputFile, lang, 'xliff'),
-  toJson: (inputFile: string, outputFile: string, lang: string) =>
-    convert(inputFile, outputFile, lang, 'json'),
+  toJson: (inputFile: string, outputFile: string) =>
+    convert(inputFile, outputFile, '', 'json'),
 };

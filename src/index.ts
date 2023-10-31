@@ -5,53 +5,65 @@ import chalk from 'chalk';
 import { ConverterService } from './services/ConverterService.js';
 
 (() => {
-  console.log(chalk.green.bold('JSON to XLIFF\n'));
+  console.log(chalk.green.bold('JSON to XLIFF'));
+  console.log(chalk.green('converts a JSON to XLIFF or a XLIFF to JSON\n'));
   const program = new Command();
+
+  program.name('json-to-xliff').usage('command [options]');
 
   program
     .command('toXliff')
-    .option('-f, --file <string>', 'input file')
-    .option('-o, --out <string>', 'output file')
+    .option('-f, --file <string>', 'input JSON file')
+    .option('-o, --out <string>', 'output XLIFF file')
     .option('-l, --lang <string>', 'language')
     .action((input) => {
       const options = {
         ...input,
       };
 
-      if (!options.out) {
-        return console.error('missing output file');
-      }
       if (!options.file) {
-        return console.error('missing input file');
+        console.error(chalk.yellow.bold('\nMissing options: input file\n'));
+        program.help();
       }
+      console.log(chalk.cyan(`input file: ${options.file}`));
+
+      if (!options.out) {
+        console.error(chalk.yellow.bold('\nMissing options: output file\n'));
+        program.help();
+      }
+      console.log(chalk.cyan(`output file: ${options.out}`));
+
       if (!options.lang) {
-        return console.error('missing language');
+        console.error(chalk.yellow.bold('\nMissing options: language\n'));
+        program.help();
       }
+      console.log(chalk.cyan(`language: ${options.lang}`));
 
       ConverterService.toXliff(options.file, options.out, options.lang);
     });
 
   program
     .command('toJson')
-    .option('-f, --file <string>', 'input file')
-    .option('-o, --out <string>', 'output file')
-    .option('-l, --lang <string>', 'language')
+    .option('-f, --file <string>', 'input XLIFF file')
+    .option('-o, --out <string>', 'output JSON file')
     .action((input) => {
       const options = {
         ...input,
       };
 
-      if (!options.out) {
-        return console.error('missing output file');
-      }
       if (!options.file) {
-        return console.error('missing input file');
+        console.error(chalk.yellow.bold('\nMissing options: input file\n'));
+        program.help();
       }
-      if (!options.lang) {
-        return console.error('missing language');
-      }
+      console.log(chalk.cyan(`input file: ${options.file}`));
 
-      ConverterService.toJson(options.file, options.out, options.lang);
+      if (!options.out) {
+        console.error(chalk.yellow.bold('\nMissing options: output file\n'));
+        program.help();
+      }
+      console.log(chalk.cyan(`output file: ${options.out}`));
+
+      ConverterService.toJson(options.file, options.out);
     });
 
   program.command('help', { isDefault: true }).action(() => {
