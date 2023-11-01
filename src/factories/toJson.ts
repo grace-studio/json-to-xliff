@@ -16,7 +16,7 @@ export const xliffToJson = async (xliffXml: string) => {
 
   const items = transUnits
     .map(({ $: { id, resname }, target }) => ({
-      key: resname || id,
+      key: resname ?? id,
       value: typeof target[0] === 'string' ? target[0] : target[0]._,
     }))
     .filter((item) => Boolean(item.key))
@@ -24,5 +24,5 @@ export const xliffToJson = async (xliffXml: string) => {
 
   const obj = buildObjectFromArray(items) ?? {};
 
-  return JSON.stringify(obj);
+  return JSON.stringify(obj, null, 2);
 };

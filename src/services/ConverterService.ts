@@ -11,14 +11,16 @@ const convert = async (
   const file = FileUtil.readFile(inputFile);
 
   if (!file) {
-    return console.error('invalid input file');
+    console.error('invalid input file');
+    return;
   }
 
   const outputPath = outputFile.split('/').slice(0, -1).join('/');
   const outputFileName = outputFile.split('/').at(-1);
 
   if (!outputFileName) {
-    return console.error('invalid output file');
+    console.error('invalid output file');
+    return;
   }
 
   const content = await ConverterFactory[to](file, lang);

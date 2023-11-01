@@ -3,17 +3,18 @@ export type InputObject = {
   value: string;
 };
 
-export const buildObjectFromArray = (inputArray: InputObject[]) =>
+export const buildObjectFromArray = (inputArray: InputObject[]): object =>
   inputArray.reduce<any>((result, item) => {
-    item.key.split('.').reduce((resultObject, current, index, array) => {
-      const isLastKey = index === array.length - 1;
+    const keys = item.key.split('.');
 
-      resultObject[current] = isLastKey
-        ? item.value
-        : resultObject[current] ?? {};
-
-      return resultObject[current];
-    }, result);
+    const _ = keys.reduce(
+      (resultObject, current, index, array) =>
+        (resultObject[current] =
+          index === array.length - 1
+            ? item.value
+            : resultObject[current] ?? {}),
+      result,
+    );
 
     return result;
   }, {});
