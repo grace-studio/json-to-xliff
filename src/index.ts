@@ -15,7 +15,8 @@ import { ConverterService } from './services/ConverterService.js';
     .command('toXliff')
     .option('-f, --file <string>', 'input JSON file')
     .option('-o, --out <string>', 'output XLIFF file')
-    .option('-l, --lang <string>', 'language')
+    .option('-l, --lang <string>', 'source language')
+    .option('-t, --target <string>', 'target language')
     .action((input) => {
       const options = {
         ...input,
@@ -39,7 +40,12 @@ import { ConverterService } from './services/ConverterService.js';
       }
       console.log(chalk.cyan(`language: ${options.lang}`));
 
-      ConverterService.toXliff(options.file, options.out, options.lang);
+      ConverterService.toXliff(
+        options.file,
+        options.out,
+        options.lang,
+        options.target,
+      );
     });
 
   program

@@ -7,7 +7,7 @@ const convertValueToTransUnit =
       return {
         $: { id, resname: id },
         source: value,
-        target: value,
+        target: '',
       };
     }
 
@@ -20,7 +20,11 @@ const convertValueToTransUnit =
     return null;
   };
 
-export const jsonToXLIFF = (json: string, sourceLanguage: string): string => {
+export const jsonToXLIFF = (
+  json: string,
+  sourceLanguage: string,
+  targetLanguage: string,
+): string => {
   const jsonObj = JSON.parse(json || '{}');
   const transUnits = Object.entries(jsonObj).flatMap(([key, value]) =>
     convertValueToTransUnit(key, sourceLanguage)(value),
@@ -35,6 +39,7 @@ export const jsonToXLIFF = (json: string, sourceLanguage: string): string => {
       file: {
         $: {
           'source-language': sourceLanguage,
+          'target-language': targetLanguage,
           datatype: 'plaintext',
         },
         header: {},

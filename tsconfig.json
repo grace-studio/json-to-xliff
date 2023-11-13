@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "rootDir": "src",
+    "declaration": true,
     "outDir": "lib",
     "strict": true,
     "target": "ES2021",

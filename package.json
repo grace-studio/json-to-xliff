@@ -15,7 +15,7 @@
     "lint": "eslint",
     "clean": "rm -rf ./lib",
     "build": "npm run clean && tsc",
-    "dev-xliff": "npm run build && node ./bin/index.js toXliff -f ./testfiles/test.json -o ./testfiles/test.xliff -l en",
+    "dev-xliff": "npm run build && node ./bin/index.js toXliff -f ./testfiles/test.json -o ./testfiles/test.xliff -l en -t sv",
     "dev-json": "npm run build && node ./bin/index.js toJson -f ./testfiles/test.xliff -o ./testfiles/test2.json",
     "prepack": "npm run build",
     "postversion": "git push && git push --tags"

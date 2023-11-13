@@ -1,139 +1,139 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file source-language="en" datatype="plaintext">
+  <file source-language="en" target-language="sv" datatype="plaintext">
     <header/>
     <body>
       <trans-unit id="exist.supply" resname="exist.supply">
         <source>rough</source>
-        <target>rough</target>
+        <target/>
       </trans-unit>
       <trans-unit id="exist.board.acres.hello" resname="exist.board.acres.hello">
         <source>alone</source>
-        <target>alone</target>
+        <target/>
       </trans-unit>
       <trans-unit id="exist.board.acres.largest" resname="exist.board.acres.largest">
         <source>sweet</source>
-        <target>sweet</target>
+        <target/>
       </trans-unit>
       <trans-unit id="exist.board.acres.fighting" resname="exist.board.acres.fighting">
         <source>lion</source>
-        <target>lion</target>
+        <target/>
       </trans-unit>
       <trans-unit id="exist.board.acres.bone" resname="exist.board.acres.bone">
         <source>with</source>
-        <target>with</target>
+        <target/>
       </trans-unit>
       <trans-unit id="exist.board.acres.dull" resname="exist.board.acres.dull">
         <source>curious</source>
-        <target>curious</target>
+        <target/>
       </trans-unit>
       <trans-unit id="exist.board.acres.wave" resname="exist.board.acres.wave">
         <source>experiment</source>
-        <target>experiment</target>
+        <target/>
       </trans-unit>
       <trans-unit id="exist.board.acres.series" resname="exist.board.acres.series">
         <source>property</source>
-        <target>property</target>
+        <target/>
       </trans-unit>
       <trans-unit id="exist.board.acres.built" resname="exist.board.acres.built">
         <source>port</source>
-        <target>port</target>
+        <target/>
       </trans-unit>
       <trans-unit id="exist.board.acres.birth" resname="exist.board.acres.birth">
         <source>anyone</source>
-        <target>anyone</target>
+        <target/>
       </trans-unit>
       <trans-unit id="exist.board.many" resname="exist.board.many">
         <source>long</source>
-        <target>long</target>
+        <target/>
       </trans-unit>
       <trans-unit id="exist.board.height" resname="exist.board.height">
         <source>lift</source>
-        <target>lift</target>
+        <target/>
       </trans-unit>
       <trans-unit id="exist.board.help" resname="exist.board.help">
         <source>late</source>
-        <target>late</target>
+        <target/>
       </trans-unit>
       <trans-unit id="exist.board.worried" resname="exist.board.worried">
         <source>outer</source>
-        <target>outer</target>
+        <target/>
       </trans-unit>
       <trans-unit id="exist.board.monkey" resname="exist.board.monkey">
         <source>real</source>
-        <target>real</target>
+        <target/>
       </trans-unit>
       <trans-unit id="exist.board.upon" resname="exist.board.upon">
         <source>faster</source>
-        <target>faster</target>
+        <target/>
       </trans-unit>
       <trans-unit id="exist.board.correctly" resname="exist.board.correctly">
         <source>remain</source>
-        <target>remain</target>
+        <target/>
       </trans-unit>
       <trans-unit id="exist.board.deal" resname="exist.board.deal">
         <source>taught</source>
-        <target>taught</target>
+        <target/>
       </trans-unit>
       <trans-unit id="exist.pick" resname="exist.pick">
         <source>noise</source>
-        <target>noise</target>
+        <target/>
       </trans-unit>
       <trans-unit id="exist.union" resname="exist.union">
         <source>night</source>
-        <target>night</target>
+        <target/>
       </trans-unit>
       <trans-unit id="exist.throw" resname="exist.throw">
         <source>alive</source>
-        <target>alive</target>
+        <target/>
       </trans-unit>
       <trans-unit id="exist.return" resname="exist.return">
         <source>memory</source>
-        <target>memory</target>
+        <target/>
       </trans-unit>
       <trans-unit id="exist.driver" resname="exist.driver">
         <source>medicine</source>
-        <target>medicine</target>
+        <target/>
       </trans-unit>
       <trans-unit id="exist.land" resname="exist.land">
         <source>wrapped</source>
-        <target>wrapped</target>
+        <target/>
       </trans-unit>
       <trans-unit id="exist.unhappy" resname="exist.unhappy">
         <source>mysterious</source>
-        <target>mysterious</target>
+        <target/>
       </trans-unit>
       <trans-unit id="onlinetools" resname="onlinetools">
         <source>especially</source>
-        <target>especially</target>
+        <target/>
       </trans-unit>
       <trans-unit id="walk" resname="walk">
         <source>planet</source>
-        <target>planet</target>
+        <target/>
       </trans-unit>
       <trans-unit id="cell" resname="cell">
         <source>mountain</source>
-        <target>mountain</target>
+        <target/>
       </trans-unit>
       <trans-unit id="surprise" resname="surprise">
         <source>want</source>
-        <target>want</target>
+        <target/>
       </trans-unit>
       <trans-unit id="bottle" resname="bottle">
         <source>transportation</source>
-        <target>transportation</target>
+        <target/>
       </trans-unit>
       <trans-unit id="plenty" resname="plenty">
         <source>discuss</source>
-        <target>discuss</target>
+        <target/>
       </trans-unit>
       <trans-unit id="brave" resname="brave">
         <source>explanation</source>
-        <target>explanation</target>
+        <target/>
       </trans-unit>
       <trans-unit id="strange" resname="strange">
         <source>layers</source>
-        <target>layers</target>
+        <target/>
       </trans-unit>
     </body>
   </file>

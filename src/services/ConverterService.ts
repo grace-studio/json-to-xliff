@@ -5,8 +5,9 @@ import { FileUtil } from '../utils/FileUtil.js';
 const convert = async (
   inputFile: string,
   outputFile: string,
-  lang: string,
   to: 'xliff' | 'json',
+  lang: string = '',
+  target: string = '',
 ) => {
   const file = FileUtil.readFile(inputFile);
 
@@ -23,7 +24,7 @@ const convert = async (
     return;
   }
 
-  const content = await ConverterFactory[to](file, lang);
+  const content = await ConverterFactory[to](file, lang, target);
 
   FileUtil.writeFile(outputPath, outputFileName, content);
 
@@ -31,8 +32,12 @@ const convert = async (
 };
 
 export const ConverterService = {
-  toXliff: (inputFile: string, outputFile: string, lang: string) =>
-    convert(inputFile, outputFile, lang, 'xliff'),
+  toXliff: (
+    inputFile: string,
+    outputFile: string,
+    lang: string,
+    target?: string,
+  ) => convert(inputFile, outputFile, 'xliff', lang, target),
   toJson: (inputFile: string, outputFile: string) =>
-    convert(inputFile, outputFile, '', 'json'),
+    convert(inputFile, outputFile, 'json'),
 };
