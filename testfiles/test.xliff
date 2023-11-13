@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file source-language="en" target-language="sv" datatype="plaintext">
+  <file source-language="en" target-language="" datatype="plaintext">
     <header/>
     <body>
       <trans-unit id="exist.supply" resname="exist.supply">

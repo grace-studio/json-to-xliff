@@ -24,7 +24,8 @@ yarn global add @grace-studio/json-to-xliff
 json-to-xliff toXliff \
 --file <input-json-file> \
 --out <output-xliff-file> \
---lang <language-code> \
+--lang <source-language-code> \
+--target <target-language-code> \
 ```
 
 **To convert a XLIFF file to JSON:**
@@ -32,5 +33,5 @@ json-to-xliff toXliff \
 ```bash
 json-to-xliff toJson \
 --file <input-xliff-file> \
---out <output-json-file>
+--out <output-json-file> \
 ```
